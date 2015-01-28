@@ -1,0 +1,13 @@
+body {
+  background-image: url("http://www.mrksmedia.com/images/mrks_bckg.png");
+}
+.container {
+  width: 700px;
+}
+a {
+  color: blue
+}
+a:hover, a:focus {
+  text-decoration:underline;
+  color: black;
+}

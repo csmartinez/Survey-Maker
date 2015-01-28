@@ -1,14 +1,19 @@
 <h1><%= @survey.name %> Survey!</h1>
+<a href="/surveys/edit_survey">Update Survey Name</a>
 
-<form action="/surveys/<%= @survey.id() %>" method="post">
-  <label for="ask">Add questions</label>
-  <input id="ask" name="ask" type="text">
+<form action="/add_question" method="post">
+  <input type="hidden" name="survey_id" value="<%= @survey.id() %>">
+  <label for="ask">Add question</label>
+  <input id="ask" name="ask" type="text">?
 
-  <button type="submit">submit new questions</button>
+  <button type="submit">Submit new question</button>
 </form>
 
-<ul>
-  <% @survey.questions.each() do |question| %>
-  <li><%= question.ask %></li>
-</ul>
+
+<% @survey.questions.each() do |question| %>
+<li><%= question.ask %>? <form><input id="answer" name="answer" type="text"></form></li>
 <% end %>
+
+<form>
+<button type="submit" class="btn btn-default">Enter</button>
+</form>

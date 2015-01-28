@@ -1,7 +1,7 @@
 <h1>Add a survey</h1>
 
 <form action='/surveys' method='post'>
-  <label for='name'>Survey</label>
+  <label for='name'>Name your new survey</label>
   <input id='name' name='name' type='text'>
 
   <button type="submit">Add survey</button>
@@ -9,8 +9,7 @@
 
 <h4>All of your surveys</h4>
 
-<ul>
   <% @surveys.each() do |survey| %>
   <li><a href="/surveys/<%= survey.id() %>"><%= survey.name %></a></li>
-</ul>
+
 <% end %>
