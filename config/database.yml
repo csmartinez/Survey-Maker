@@ -1,0 +1,9 @@
+development:
+  adapter: postgresql
+  database: survey_development
+  template: template0
+
+test:
+  adapter: postgresql
+  database: surevey_test
+  template: template0

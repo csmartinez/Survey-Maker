@@ -1,0 +1,14 @@
+<h1><%= @survey.name %> Survey!</h1>
+
+<form action="/surveys/<%= @survey.id() %>" method="post">
+  <label for="ask">Add questions</label>
+  <input id="ask" name="ask" type="text">
+
+  <button type="submit">submit new questions</button>
+</form>
+
+<ul>
+  <% @survey.questions.each() do |question| %>
+  <li><%= question.ask %></li>
+</ul>
+<% end %>
